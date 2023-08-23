@@ -6,7 +6,7 @@ from PIL import Image
 # from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 # from docx import *
 
-
+# 参考测试代码
 # def test():
 #     # 创建一个新的Word文档
 #     doc = Document()
@@ -20,6 +20,7 @@ from PIL import Image
 #     doc.save('aligned_example.docx')
 
 
+# 剪裁图像
 def cut(file_name) -> str:
     # 读取图像
     file_path = 'origin/' + file_name
@@ -33,6 +34,7 @@ def cut(file_name) -> str:
     return new_file_path
 
 
+# 剪裁所有图像
 def cut_all():
     # 打开文件夹里的所有文件
     folder = "origin"
@@ -41,6 +43,7 @@ def cut_all():
         cut(file)
 
 
+# 剪裁图像参考代码
 def ref_cut(file):
     image = cv2.imread(file)
 
@@ -54,6 +57,7 @@ def ref_cut(file):
     print("Cropped image saved successfully.")
 
 
+# 增强图像
 def enhance(file_name):
     # 进行直方图均衡化
     # equalized_image = cv2.equalizeHist(image)
@@ -80,6 +84,7 @@ def enhance(file_name):
     return new_file_path
 
 
+# 增强所有图像
 def enhance_all():
     # 打开文件夹里的所有文件
     folder_path = "cut"
@@ -92,6 +97,7 @@ dr = '多肉:'
 cz = '橙子:'
 
 
+# 将图像内容识别成strs
 def img_to_strs(file_name) -> list[str]:
     # 将识别语言设置为中文
     # tessdata_dir_config = '--tessdata-dir "D:/softwares/tesseract/tessdata" -l chi_sim'
@@ -168,6 +174,7 @@ def img_to_strs(file_name) -> list[str]:
     return ret
 
 
+# 参考测试代码
 # def ref_docx():
 #     pass
 # 创建一个新的Word文档
@@ -180,6 +187,7 @@ def img_to_strs(file_name) -> list[str]:
 # doc.save('example.docx')
 
 
+# 将图像写进txt
 def imgs_to_docx():
     # 打开文件夹里的所有文件
     date = r'[0-9]{1,4}\-[0-9]{1,2}\-[0-9]{1,2}'
