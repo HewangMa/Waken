@@ -6,19 +6,6 @@ from PIL import Image
 # from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 # from docx import *
 
-# 参考测试代码
-# def test():
-#     # 创建一个新的Word文档
-#     doc = Document()
-#
-#     # 添加左对齐的段落
-#     left_aligned_text = "这是左对齐的段落。"
-#     paragraph = doc.add_paragraph(left_aligned_text)
-#     paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.LEFT
-#
-#     # 保存文档
-#     doc.save('aligned_example.docx')
-
 
 # 剪裁图像
 def cut(file_name) -> str:
@@ -174,18 +161,6 @@ def img_to_strs(file_name) -> list[str]:
     return ret
 
 
-# 参考测试代码
-# def ref_docx():
-#     pass
-# 创建一个新的Word文档
-#
-# # 添加段落（文字内容）
-# text = "这是要写入文档的文字内容。"
-# doc.add_paragraph(text)
-#
-# # 保存文档
-# doc.save('example.docx')
-
 
 # 将图像写进txt
 def imgs_to_docx():
@@ -220,6 +195,4 @@ if __name__ == '__main__':
     # cut_all()
     # enhance_all()
     # imgs_to_docx()
-    # print(16+15+10+12+9+15+9+15+6+13+1)
-    # print(3000+9*(16+15+10+12+9+15+9+15+1+6+13)+500)
     print('end of programming')
